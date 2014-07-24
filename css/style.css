@@ -1,0 +1,13 @@
+html {
+  background: url("../img/binding_dark.png"); }
+
+body {
+  border: 1px solid #ccc;
+  opacity: 2;
+  width: 780px;
+  margin: 40px auto;
+  padding: 40px;
+  background-color: #fff;
+  -moz-box-shadow: 0 2px 8px 2px #000000;
+  -webkit-box-shadow: 0 2px 8px 2px #000000;
+  box-shadow: 0 2px 8px 2px #000000; }
