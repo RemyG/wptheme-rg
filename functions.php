@@ -100,6 +100,8 @@ function wptheme_rg_scripts() {
 
 	wp_enqueue_style( '960', get_template_directory_uri() . '/css/960.css' );
 
+	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/css/font-awesome.min.css' );
+
 	wp_enqueue_style( 'wptheme-rg-custom-style', get_template_directory_uri() . '/css/style.css' );
 
 	wp_enqueue_script( 'wptheme-rg-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
