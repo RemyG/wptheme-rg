@@ -79,7 +79,7 @@ function wptheme_rg_posted_on() {
 	);
 
 	$posted_on = sprintf(
-		_x( 'Posted on %s', 'post date', 'wptheme-rg' ),
+		_x( '<i class="fa fa-bookmark-o"></i> %s', 'post date', 'wptheme-rg' ),
 		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 	);
 
@@ -88,8 +88,61 @@ function wptheme_rg_posted_on() {
 		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 	);
 
-	echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>';
+	//echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>';
+	echo '<span class="posted-on">' . $posted_on . '</span>';
 
+}
+endif;
+
+if ( ! function_exists( 'wptheme_rg_post_categories' ) ) :
+function wptheme_rg_post_categories() {
+	$categories_list = get_the_category_list( __( ', ', 'wptheme-rg' ) );
+	if ( $categories_list && wptheme_rg_categorized_blog() ) :
+		echo '<div class="cat-links">';
+		printf( __( '<i class="fa fa-folder-open"></i> %1$s', 'wptheme-rg' ), $categories_list );
+		echo '</div>';
+	endif;
+}
+endif;
+
+if ( ! function_exists( 'wptheme_rg_post_tags' ) ) :
+function wptheme_rg_post_tags() {
+	$tags_list = get_the_tag_list( '', __( ', ', 'wptheme-rg' ) );
+	if ( $tags_list ) :
+		echo '<div class="tags-links">';
+		printf( __( '<i class="fa fa-tag'.(sizeof($tags_list) > 1 ? '' : 's').'"></i> %1$s', 'wptheme-rg' ), $tags_list );
+		echo '</div>';
+	endif;
+}
+endif;
+
+if ( ! function_exists( 'wptheme_rg_post_comments' ) ) :
+function wptheme_rg_post_comments() {
+	if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) :
+		echo '<div class="comments-link">';
+		if (get_comments_number() == 0) {
+			echo __( '<i class="fa fa-comment-o"></i> ', 'wptheme-rg' );
+		}
+		else if (get_comments_number() == 1) {
+			echo __( '<i class="fa fa-comment"></i> ', 'wptheme-rg' );
+		}
+		else if (get_comments_number() > 1) {
+			echo __( '<i class="fa fa-comments"></i> ', 'wptheme-rg' );
+		}
+		echo comments_popup_link( __( 'Leave a comment', 'wptheme-rg' ), __( '1 Comment', 'wptheme-rg' ), __( '% Comments', 'wptheme-rg' ) ).'</div>';
+	endif;
+}
+endif;
+
+if ( ! function_exists( 'wptheme_rg_post_permalink' ) ) :
+function wptheme_rg_post_permalink() {
+	printf( __( '<div class="permalink"><i class="fa fa-link"></i> <a href="%1$s" rel="bookmark">Permalink</a><div>', 'wptheme-rg'), get_permalink() );
+}
+endif;
+
+if ( ! function_exists( 'wptheme_rg_post_edit' ) ) :
+function wptheme_rg_post_edit() {
+	edit_post_link( __( 'Edit', 'wptheme-rg' ), '<div class="edit-link"><i class="fa fa-pencil"></i> ', '</div>' );
 }
 endif;
 

@@ -1,3 +1,15 @@
+html {
+  color: black; }
+
+a {
+  color: #333333;
+  border-bottom: 1px solid #2980b9;
+  text-decoration: none; }
+  a:visited {
+    color: #333333; }
+  a:hover {
+    color: #2980b9; }
+
 .cell {
   display: table-cell;
   vertical-align: middle;
@@ -5,6 +17,8 @@
 
 header#masthead .cell {
   height: 140px; }
+header#masthead a {
+  border: none; }
 header#masthead div.site-branding h1.site-title {
   font-size: 36px;
   font-weight: bold;
@@ -51,3 +65,20 @@ header#masthead nav#site-navigation div.menu ul.nav-menu {
       border-bottom: none; }
     header#masthead nav#site-navigation div.menu ul.nav-menu ul.children ul.children {
       top: -1px; }
+
+main#main article.post header.entry-header h1.entry-title a,
+main#main article.page header.entry-header h1.entry-title a {
+  color: black;
+  border: none; }
+  main#main article.post header.entry-header h1.entry-title a:hover,
+  main#main article.page header.entry-header h1.entry-title a:hover {
+    color: #2980b9; }
+main#main article.post footer.entry-footer,
+main#main article.page footer.entry-footer {
+  margin-top: 20px;
+  clear: both; }
+  main#main article.post footer.entry-footer a,
+  main#main article.page footer.entry-footer a {
+    border: none; }
+main#main .hentry {
+  margin: 0 0 80px; }

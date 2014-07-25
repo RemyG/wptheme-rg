@@ -21,6 +21,6 @@
 		?>
 	</div><!-- .entry-content -->
 	<footer class="entry-footer">
-		<?php edit_post_link( __( 'Edit', 'wptheme-rg' ), '<span class="edit-link">', '</span>' ); ?>
+		<?php wptheme_rg_post_edit(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

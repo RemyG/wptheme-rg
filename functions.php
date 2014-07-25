@@ -44,7 +44,7 @@ function wptheme_rg_setup() {
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'wptheme-rg' ),
 	) );
-	
+
 	/*
 	 * Switch default core markup for search form, comment form, and comments
 	 * to output valid HTML5.

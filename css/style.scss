@@ -1,7 +1,24 @@
+$base-color: #000;
+$link-base-color: #333;
+$link-hover-color: #2980b9;
+
 html {
+	color: $base-color;
 }
 
 body {
+}
+
+a {
+	color: $link-base-color;
+	border-bottom: 1px solid $link-hover-color;
+	text-decoration: none;
+	&:visited {
+		color: $link-base-color;
+	}
+	&:hover {
+		color: $link-hover-color;
+	}
 }
 
 .cell {
@@ -13,6 +30,9 @@ body {
 header#masthead {
 	.cell {
 		height: 140px;
+	}
+	a {
+		border: none;
 	}
 	div.site-branding {
 		h1.site-title {
@@ -45,13 +65,13 @@ header#masthead {
 				> li.page_item_has_children {
 							> a:after {
 								font-family: FontAwesome;
-								  font-weight: normal;
-								  font-style: normal;
-								  display: inline-block;
-								  text-decoration: inherit;
-							    content: "\f0d7";
-							    float: right;
-							    margin-left: 10px;
+								font-weight: normal;
+								font-style: normal;
+								display: inline-block;
+								text-decoration: inherit;
+								content: "\f0d7";
+								float: right;
+								margin-left: 10px;
 							}
 						}
 				ul.children {
@@ -66,12 +86,12 @@ header#masthead {
 						&.page_item_has_children {
 							> a:after {
 								font-family: FontAwesome;
-								  font-weight: normal;
-								  font-style: normal;
-								  display: inline-block;
-								  text-decoration: inherit;
-							    content: "\f0da";
-							    float: right;
+								font-weight: normal;
+								font-style: normal;
+								display: inline-block;
+								text-decoration: inherit;
+								content: "\f0da";
+								float: right;
 							}
 						}
 					}
@@ -84,5 +104,32 @@ header#masthead {
 				}
 			}
 		}
+	}
+}
+
+main#main {
+	article.post,
+	article.page {
+		header.entry-header {
+			h1.entry-title {
+				a {
+					color: $base-color;
+					border: none;
+					&:hover {
+						color: $link-hover-color;
+					}
+				}
+			}
+		}
+		footer.entry-footer {
+			margin-top: 20px;
+			clear: both;
+			a {
+				border: none;
+			}
+		}
+	}
+	.hentry {
+		margin: 0 0 80px;
 	}
 }
