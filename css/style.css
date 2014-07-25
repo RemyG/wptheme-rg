@@ -1,13 +1,53 @@
-html {
-  background: url("../img/binding_dark.png"); }
+.cell {
+  display: table-cell;
+  vertical-align: middle;
+  float: none; }
 
-body {
-  border: 1px solid #ccc;
-  opacity: 2;
-  width: 780px;
-  margin: 40px auto;
-  padding: 40px;
-  background-color: #fff;
-  -moz-box-shadow: 0 2px 8px 2px #000000;
-  -webkit-box-shadow: 0 2px 8px 2px #000000;
-  box-shadow: 0 2px 8px 2px #000000; }
+header#masthead .cell {
+  height: 140px; }
+header#masthead div.site-branding h1.site-title {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 0; }
+  header#masthead div.site-branding h1.site-title a {
+    text-decoration: none;
+    color: #789; }
+header#masthead nav#site-navigation div.menu ul.nav-menu {
+  float: right; }
+  header#masthead nav#site-navigation div.menu ul.nav-menu li {
+    margin: 0; }
+    header#masthead nav#site-navigation div.menu ul.nav-menu li a {
+      line-height: 40px;
+      padding: 0 7px;
+      color: #666; }
+      header#masthead nav#site-navigation div.menu ul.nav-menu li a:hover {
+        color: #222; }
+  header#masthead nav#site-navigation div.menu ul.nav-menu > li.page_item_has_children > a:after {
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    display: inline-block;
+    text-decoration: inherit;
+    content: "\f0d7";
+    float: right;
+    margin-left: 10px; }
+  header#masthead nav#site-navigation div.menu ul.nav-menu ul.children {
+    top: 40px;
+    border: 1px solid #ccc;
+    box-shadow: none; }
+    header#masthead nav#site-navigation div.menu ul.nav-menu ul.children li {
+      border-bottom: 1px dashed #ccc; }
+      header#masthead nav#site-navigation div.menu ul.nav-menu ul.children li a {
+        line-height: 30px; }
+      header#masthead nav#site-navigation div.menu ul.nav-menu ul.children li.page_item_has_children > a:after {
+        font-family: FontAwesome;
+        font-weight: normal;
+        font-style: normal;
+        display: inline-block;
+        text-decoration: inherit;
+        content: "\f0da";
+        float: right; }
+    header#masthead nav#site-navigation div.menu ul.nav-menu ul.children li:last-child {
+      border-bottom: none; }
+    header#masthead nav#site-navigation div.menu ul.nav-menu ul.children ul.children {
+      top: -1px; }
