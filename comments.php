@@ -22,6 +22,8 @@ if ( post_password_required() ) {
 
 	<?php // You can start editing here -- including this comment! ?>
 
+	<?php comment_form(); ?>
+
 	<?php if ( have_comments() ) : ?>
 		<h2 class="comments-title">
 			<?php
@@ -38,14 +40,15 @@ if ( post_password_required() ) {
 		</nav><!-- #comment-nav-above -->
 		<?php endif; // check for comment navigation ?>
 
-		<ol class="comment-list">
+		<ul class="comment-list">
 			<?php
 				wp_list_comments( array(
-					'style'      => 'ol',
+					'style'      => 'ul',
 					'short_ping' => true,
+					'callback' => 'wptheme_rg_comment',
 				) );
 			?>
-		</ol><!-- .comment-list -->
+		</ul><!-- .comment-list -->
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
 		<nav id="comment-nav-below" class="comment-navigation" role="navigation">
@@ -63,7 +66,5 @@ if ( post_password_required() ) {
 	?>
 		<p class="no-comments"><?php _e( 'Comments are closed.', 'wptheme-rg' ); ?></p>
 	<?php endif; ?>
-
-	<?php comment_form(); ?>
 
 </div><!-- #comments -->

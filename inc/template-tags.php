@@ -99,7 +99,7 @@ function wptheme_rg_post_categories() {
 	$categories_list = get_the_category_list( __( ', ', 'wptheme-rg' ) );
 	if ( $categories_list && wptheme_rg_categorized_blog() ) :
 		echo '<div class="cat-links">';
-		printf( __( '<i class="fa fa-folder-open"></i> %1$s', 'wptheme-rg' ), $categories_list );
+		printf( __( '<h2>Categor'.(sizeof($tags_list) > 1 ? 'y' : 'ies').'</h2> <div>%1$s</div>', 'wptheme-rg' ), $categories_list );
 		echo '</div>';
 	endif;
 }
@@ -110,9 +110,18 @@ function wptheme_rg_post_tags() {
 	$tags_list = get_the_tag_list( '', __( ', ', 'wptheme-rg' ) );
 	if ( $tags_list ) :
 		echo '<div class="tags-links">';
-		printf( __( '<i class="fa fa-tag'.(sizeof($tags_list) > 1 ? '' : 's').'"></i> %1$s', 'wptheme-rg' ), $tags_list );
+		printf( __( '<h2>Tag'.(sizeof($tags_list) > 1 ? '' : 's').'</h2> <div>%1$s</div>', 'wptheme-rg' ), $tags_list );
 		echo '</div>';
 	endif;
+}
+endif;
+
+if ( ! function_exists( 'wptheme_rg_post_author' ) ) :
+function wptheme_rg_post_author() {
+	echo '<div class="author">';
+	echo __( '<div class="vcard">'.get_avatar( get_the_author_meta( 'ID' ), 50 ).'</div> <h2>Author</h2> <div class="author-name"><a class="url fn n" href="' .
+		esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></div>', 'wptheme-rg' );
+	echo '</div>';
 }
 endif;
 

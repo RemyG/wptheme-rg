@@ -10,10 +10,21 @@ a {
   a:hover {
     color: #2980b9; }
 
+pre {
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  padding: 15px; }
+
 .cell {
   display: table-cell;
   vertical-align: middle;
   float: none; }
+
+.alignleft {
+  margin-right: 15px; }
+
+.alignright {
+  margin-left: 15px; }
 
 header#masthead .cell {
   height: 140px; }
@@ -82,3 +93,112 @@ main#main article.page footer.entry-footer {
     border: none; }
 main#main .hentry {
   margin: 0 0 80px; }
+main#main div.content-meta-container {
+  width: 100%; }
+main#main div.content-meta div.cat-links,
+main#main div.content-meta div.tags-links,
+main#main div.content-meta div.author {
+  margin-bottom: 15px; }
+  main#main div.content-meta div.cat-links h2,
+  main#main div.content-meta div.tags-links h2,
+  main#main div.content-meta div.author h2 {
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 0; }
+  main#main div.content-meta div.cat-links div,
+  main#main div.content-meta div.tags-links div,
+  main#main div.content-meta div.author div {
+    font-size: 12px; }
+    main#main div.content-meta div.cat-links div a,
+    main#main div.content-meta div.tags-links div a,
+    main#main div.content-meta div.author div a {
+      border: 0; }
+  main#main div.content-meta div.cat-links div.vcard,
+  main#main div.content-meta div.tags-links div.vcard,
+  main#main div.content-meta div.author div.vcard {
+    margin-bottom: 15px; }
+    main#main div.content-meta div.cat-links div.vcard img,
+    main#main div.content-meta div.tags-links div.vcard img,
+    main#main div.content-meta div.author div.vcard img {
+      border-radius: 99px; }
+
+div#comments ul.comment-list li.comment,
+div#comments ul.comment-list li.trackback,
+div#comments ul.comment-list li.pingback {
+  list-style: none;
+  margin: 30px 0; }
+  div#comments ul.comment-list li.comment article.comment,
+  div#comments ul.comment-list li.trackback article.comment,
+  div#comments ul.comment-list li.pingback article.comment {
+    overflow: hidden; }
+    div#comments ul.comment-list li.comment article.comment div.vcard,
+    div#comments ul.comment-list li.trackback article.comment div.vcard,
+    div#comments ul.comment-list li.pingback article.comment div.vcard {
+      clear: both;
+      float: left;
+      padding-top: 20px;
+      display: inline-block; }
+      div#comments ul.comment-list li.comment article.comment div.vcard img,
+      div#comments ul.comment-list li.trackback article.comment div.vcard img,
+      div#comments ul.comment-list li.pingback article.comment div.vcard img {
+        border-radius: 22px; }
+    div#comments ul.comment-list li.comment article.comment main.comment,
+    div#comments ul.comment-list li.trackback article.comment main.comment,
+    div#comments ul.comment-list li.pingback article.comment main.comment {
+      margin-left: 70px;
+      padding: 20px;
+      background-color: #eee;
+      position: relative; }
+      div#comments ul.comment-list li.comment article.comment main.comment:after,
+      div#comments ul.comment-list li.trackback article.comment main.comment:after,
+      div#comments ul.comment-list li.pingback article.comment main.comment:after {
+        border-bottom: 20px solid transparent;
+        border-right: 20px solid #eee;
+        border-top: 0 none;
+        content: "";
+        height: 0;
+        left: -20px;
+        position: absolute !important;
+        top: 0;
+        width: 0;
+        z-index: 100; }
+      div#comments ul.comment-list li.comment article.comment main.comment header,
+      div#comments ul.comment-list li.trackback article.comment main.comment header,
+      div#comments ul.comment-list li.pingback article.comment main.comment header {
+        padding-bottom: 20px;
+        border-bottom: 1px solid #ccc; }
+        div#comments ul.comment-list li.comment article.comment main.comment header div.date,
+        div#comments ul.comment-list li.trackback article.comment main.comment header div.date,
+        div#comments ul.comment-list li.pingback article.comment main.comment header div.date {
+          font-size: 10px;
+          margin-right: 120px; }
+          div#comments ul.comment-list li.comment article.comment main.comment header div.date a,
+          div#comments ul.comment-list li.trackback article.comment main.comment header div.date a,
+          div#comments ul.comment-list li.pingback article.comment main.comment header div.date a {
+            color: #333;
+            border: 0; }
+        div#comments ul.comment-list li.comment article.comment main.comment header div.author,
+        div#comments ul.comment-list li.trackback article.comment main.comment header div.author,
+        div#comments ul.comment-list li.pingback article.comment main.comment header div.author {
+          margin-right: 120px;
+          font-size: 16px;
+          font-weight: bold; }
+          div#comments ul.comment-list li.comment article.comment main.comment header div.author a,
+          div#comments ul.comment-list li.trackback article.comment main.comment header div.author a,
+          div#comments ul.comment-list li.pingback article.comment main.comment header div.author a {
+            border: 0; }
+        div#comments ul.comment-list li.comment article.comment main.comment header div.reply,
+        div#comments ul.comment-list li.trackback article.comment main.comment header div.reply,
+        div#comments ul.comment-list li.pingback article.comment main.comment header div.reply {
+          float: right;
+          font-size: 10px;
+          display: inline-block; }
+          div#comments ul.comment-list li.comment article.comment main.comment header div.reply a,
+          div#comments ul.comment-list li.trackback article.comment main.comment header div.reply a,
+          div#comments ul.comment-list li.pingback article.comment main.comment header div.reply a {
+            border: none; }
+      div#comments ul.comment-list li.comment article.comment main.comment section.comment,
+      div#comments ul.comment-list li.trackback article.comment main.comment section.comment,
+      div#comments ul.comment-list li.pingback article.comment main.comment section.comment {
+        margin-top: 20px; }
