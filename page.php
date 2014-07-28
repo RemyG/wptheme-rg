@@ -18,7 +18,9 @@ get_header(); ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<div class="container_12">
-					<?php get_template_part( 'content', 'page' ); ?>
+					<div class="grid_12">
+						<?php get_template_part( 'content', 'page' ); ?>
+					</div>
 				</div>
 
 				<?php

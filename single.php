@@ -13,11 +13,13 @@ get_header(); ?>
 		<?php while ( have_posts() ) : the_post(); ?>
 
 			<div class="container_12">
+				<div class="grid_12">
 
 				<?php get_template_part( 'content', 'single' ); ?>
 
 				<?php wptheme_rg_post_nav(); ?>
 
+				</div>
 			</div>
 
 			<div class="comment-container">
