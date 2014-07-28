@@ -37,6 +37,8 @@ header#masthead div.site-branding h1.site-title {
   header#masthead div.site-branding h1.site-title a {
     text-decoration: none;
     color: #69a6ce; }
+    header#masthead div.site-branding h1.site-title a:hover {
+      color: #2980b9; }
 header#masthead nav#site-navigation div.menu ul.nav-menu {
   float: right; }
   header#masthead nav#site-navigation div.menu ul.nav-menu li {
@@ -84,6 +86,9 @@ main#main article.page header.entry-header h1.entry-title a {
   main#main article.post header.entry-header h1.entry-title a:hover,
   main#main article.page header.entry-header h1.entry-title a:hover {
     color: #2980b9; }
+main#main article.post header.entry-header div.entry-meta a,
+main#main article.page header.entry-header div.entry-meta a {
+  border: none; }
 main#main article.post footer.entry-footer,
 main#main article.page footer.entry-footer {
   margin-top: 20px;

@@ -60,7 +60,11 @@ header#masthead {
 			margin: 0;
 			a {
 				text-decoration: none;
-				color: #69a6ce;
+				color: $button-bg-color;
+				&:hover {
+					color: $button-bg-color-hover;
+				}
+
 			}
 		}
 	}
@@ -137,6 +141,11 @@ main#main {
 					&:hover {
 						color: $link-hover-color;
 					}
+				}
+			}
+			div.entry-meta {
+				a {
+					border: none;
 				}
 			}
 		}
