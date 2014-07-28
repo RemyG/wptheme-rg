@@ -11,6 +11,7 @@ get_header(); ?>
 
 	<section id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
+			<div class="container_12">
 
 		<?php if ( have_posts() ) : ?>
 
@@ -97,9 +98,14 @@ get_header(); ?>
 			<?php get_template_part( 'content', 'none' ); ?>
 
 		<?php endif; ?>
-
+		
+			</div>
 		</main><!-- #main -->
 	</section><!-- #primary -->
 
-<?php get_sidebar(); ?>
-<?php get_footer(); ?>
+	<div class="footer-container">
+		<div class="container_12">
+			<?php get_sidebar(); ?>
+			<?php get_footer(); ?>
+		</div>
+	</div>

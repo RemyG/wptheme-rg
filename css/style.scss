@@ -185,7 +185,7 @@ div.comment-container {
 	overflow-x: hidden;
 	$comments-bg: #eee;
 	background: $comments-bg;
-	padding-top: 20px;
+	padding: 20px 0;
 }
 
 div#comments {
@@ -294,6 +294,64 @@ div#comments {
 					}
 				}
 			}
+		}
+	}
+}
+
+div.sidebar-container {
+	overflow-x: hidden;
+	$sidebar-bg: #444;
+	background: $sidebar-bg;
+	padding: 20px 0;
+	color: #ddd;
+}
+
+div.footer-container {
+	overflow-x: hidden;
+	$footer-bg: #222;
+	background: $footer-bg;
+	padding: 20px 0;
+	color: #ddd;
+	.container_12 {
+		.grid_8 {
+			margin: 0;
+			.grid_4 {
+				width: 290px;
+			}
+		}
+	}
+	a {
+		color: #ddd;
+		&:hover {
+			color: $link-hover-color;
+		}
+	}
+	h1, h2 {
+		font-size: 14px;
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+	table#wp-calendar {
+		caption {
+			font-size: 14px;
+			text-transform: uppercase;
+			font-weight: bold;
+			margin-bottom: 15px;
+		}
+		thead {
+			th {
+				font-weight: bold;
+			}
+		}
+		tfoot {
+			td {
+				padding-top: 10px;
+			}
+		}
+	}
+	footer#colophon {
+		img {
+			margin-bottom: 10px;
 		}
 	}
 }

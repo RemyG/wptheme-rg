@@ -126,7 +126,7 @@ main#main div.content-meta div.author {
 div.comment-container {
   overflow-x: hidden;
   background: #eeeeee;
-  padding-top: 20px; }
+  padding: 20px 0; }
 
 div#comments div#respond form#commentform > p label {
   display: block;
@@ -231,3 +231,38 @@ div#comments ul.comment-list li.pingback {
       div#comments ul.comment-list li.trackback article.comment main.comment section.comment,
       div#comments ul.comment-list li.pingback article.comment main.comment section.comment {
         margin-top: 20px; }
+
+div.sidebar-container {
+  overflow-x: hidden;
+  background: #444444;
+  padding: 20px 0;
+  color: #ddd; }
+
+div.footer-container {
+  overflow-x: hidden;
+  background: #222222;
+  padding: 20px 0;
+  color: #ddd; }
+  div.footer-container .container_12 .grid_8 {
+    margin: 0; }
+    div.footer-container .container_12 .grid_8 .grid_4 {
+      width: 290px; }
+  div.footer-container a {
+    color: #ddd; }
+    div.footer-container a:hover {
+      color: #2980b9; }
+  div.footer-container h1, div.footer-container h2 {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold; }
+  div.footer-container table#wp-calendar caption {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 15px; }
+  div.footer-container table#wp-calendar thead th {
+    font-weight: bold; }
+  div.footer-container table#wp-calendar tfoot td {
+    padding-top: 10px; }
+  div.footer-container footer#colophon img {
+    margin-bottom: 10px; }
