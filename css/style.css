@@ -36,7 +36,7 @@ header#masthead div.site-branding h1.site-title {
   margin: 0; }
   header#masthead div.site-branding h1.site-title a {
     text-decoration: none;
-    color: #789; }
+    color: #69a6ce; }
 header#masthead nav#site-navigation div.menu ul.nav-menu {
   float: right; }
   header#masthead nav#site-navigation div.menu ul.nav-menu li {
@@ -123,6 +123,35 @@ main#main div.content-meta div.author {
     main#main div.content-meta div.author div.vcard img {
       border-radius: 99px; }
 
+div.comment-container {
+  overflow-x: hidden;
+  background: #eeeeee;
+  padding-top: 20px; }
+
+div#comments div#respond form#commentform > p label {
+  display: block;
+  text-transform: uppercase;
+  color: #888;
+  font-size: 11px;
+  margin-bottom: 5px; }
+div#comments div#respond form#commentform > p input, div#comments div#respond form#commentform > p textarea {
+  border-radius: 0;
+  background-color: #ddd;
+  border: none;
+  padding: 6px; }
+  div#comments div#respond form#commentform > p input:focus, div#comments div#respond form#commentform > p textarea:focus {
+    outline: none; }
+div#comments div#respond form#commentform > p input#submit {
+  background-color: #69a6ce;
+  box-shadow: none;
+  text-transform: uppercase;
+  font-size: 12px;
+  padding: 10px 30px;
+  color: white;
+  text-shadow: none; }
+  div#comments div#respond form#commentform > p input#submit:hover {
+    background-color: #2980b9;
+    color: #eeeeee; }
 div#comments ul.comment-list li.comment,
 div#comments ul.comment-list li.trackback,
 div#comments ul.comment-list li.pingback {
@@ -148,13 +177,13 @@ div#comments ul.comment-list li.pingback {
     div#comments ul.comment-list li.pingback article.comment main.comment {
       margin-left: 70px;
       padding: 20px;
-      background-color: #eee;
+      background-color: #ddd;
       position: relative; }
       div#comments ul.comment-list li.comment article.comment main.comment:after,
       div#comments ul.comment-list li.trackback article.comment main.comment:after,
       div#comments ul.comment-list li.pingback article.comment main.comment:after {
         border-bottom: 20px solid transparent;
-        border-right: 20px solid #eee;
+        border-right: 20px solid #ddd;
         border-top: 0 none;
         content: "";
         height: 0;

@@ -2,6 +2,11 @@ $base-color: #000;
 $link-base-color: #333;
 $link-hover-color: #2980b9;
 
+$button-color: #ffffff;
+$button-color-hover: #eee;
+$button-bg-color: #69a6ce;
+$button-bg-color-hover: #2980b9;
+
 html {
 	color: $base-color;
 }
@@ -55,7 +60,7 @@ header#masthead {
 			margin: 0;
 			a {
 				text-decoration: none;
-				color: #789;
+				color: #69a6ce;
 			}
 		}
 	}
@@ -176,9 +181,51 @@ main#main {
 	}
 }
 
+div.comment-container {
+	overflow-x: hidden;
+	$comments-bg: #eee;
+	background: $comments-bg;
+	padding-top: 20px;
+}
+
 div#comments {
 	h2.comments-title {
 
+	}
+	div#respond {
+		form#commentform {
+			> p {
+				label {
+					display: block;
+					text-transform: uppercase;
+					color: #888;
+					font-size: 11px;
+					margin-bottom: 5px;
+				}
+				input, textarea {
+					border-radius: 0;
+					background-color: #ddd;
+					border: none;
+					padding: 6px;
+					&:focus {
+						outline: none;
+					}
+				}
+				input#submit {
+					background-color: $button-bg-color;
+					box-shadow: none;
+					text-transform: uppercase;
+					font-size: 12px;
+					padding: 10px 30px;
+					color: $button-color;
+					text-shadow: none;
+					&:hover {
+						background-color: $button-bg-color-hover;
+						color: $button-color-hover;
+					}
+				}
+			}
+		}
 	}
 	ul.comment-list {
 		li.comment,
@@ -200,11 +247,11 @@ div#comments {
 				main.comment {
 					margin-left: 70px;
 					padding: 20px;
-					background-color: #eee;
+					background-color: #ddd;
 					position: relative;
 					&:after {
 						border-bottom: 20px solid transparent;
-					    border-right: 20px solid #eee;
+					    border-right: 20px solid #ddd;
 					    border-top: 0 none;
 					    content: "";
 					    height: 0;

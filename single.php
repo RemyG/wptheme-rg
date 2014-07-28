@@ -12,26 +12,33 @@ get_header(); ?>
 
 		<?php while ( have_posts() ) : the_post(); ?>
 
-			<?php get_template_part( 'content', 'single' ); ?>
-
-			<?php wptheme_rg_post_nav(); ?>
-
 			<div class="container_12">
 
-			<?php
-				// If comments are open or we have at least one comment, load up the comment template
-				if ( comments_open() || '0' != get_comments_number() ) :
-					echo '<div class="grid_9">';
-					comments_template();
-					echo '</div>';
-					echo '<div class="grid_3">';
-				else:
-					echo '<div class="prefix_9 grid_3 content-meta-container">';
-				endif;
+				<?php get_template_part( 'content', 'single' ); ?>
 
-				get_template_part( 'content', 'meta' ); ?>
+				<?php wptheme_rg_post_nav(); ?>
 
 			</div>
+
+			<div class="comment-container">
+				<div class="container_12">
+
+					<?php
+						// If comments are open or we have at least one comment, load up the comment template
+						if ( comments_open() || '0' != get_comments_number() ) :
+							echo '<div class="grid_9">';
+							comments_template();
+							echo '</div>';
+							echo '<div class="grid_3">';
+						else:
+							echo '<div class="prefix_9 grid_3 content-meta-container">';
+						endif;
+
+						get_template_part( 'content', 'meta' );
+
+						echo '</div>';
+					?>
+				</div>
 
 			</div>
 

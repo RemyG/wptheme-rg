@@ -17,12 +17,20 @@ get_header(); ?>
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php get_template_part( 'content', 'page' ); ?>
+				<div class="container_12">
+					<?php get_template_part( 'content', 'page' ); ?>
+				</div>
 
 				<?php
 					// If comments are open or we have at least one comment, load up the comment template
 					if ( comments_open() || '0' != get_comments_number() ) :
+						echo '<div class="comment-container">';
+						echo '<div class="container_12">';
+						echo '<div class="grid_9">';
 						comments_template();
+						echo '</div>';
+						echo '</div>';
+						echo '</div>';
 					endif;
 				?>
 
